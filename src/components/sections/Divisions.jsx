@@ -26,7 +26,7 @@ const Divisions = () => {
   ];
 
   return (
-    <section id="divisions" className="section-padding bg-gradient-to-b from-dark to-dark-brown">
+    <section id="divisions" className="section-padding bg-[#f5f5f5] dark:bg-dark">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,8 +35,8 @@ const Divisions = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="heading-primary mb-4">OUR DIVISION</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-dark dark:text-white mb-4 tracking-tight">OUR DIVISION</h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
             We operate across multiple divisions, each specialized in delivering excellence in their respective domains.
           </p>
         </motion.div>
@@ -86,24 +86,24 @@ const DivisionCard = ({ division, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group relative overflow-hidden rounded-lg bg-dark-brown border border-gray-800 hover:border-primary transition-all duration-300"
+      className="group relative overflow-hidden rounded-lg bg-white dark:bg-dark-brown shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
     >
       {/* Image */}
       <div className="relative h-64 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-brown via-transparent to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
         <div className={`w-full h-full bg-gradient-to-br ${division.gradient}`}></div>
       </div>
 
       {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+      <div className="p-6 bg-white dark:bg-dark-brown">
+        <h3 className="text-lg md:text-xl font-bold text-dark dark:text-white mb-3 group-hover:text-primary transition-colors">
           {division.title}
         </h3>
-        <p className="text-gray-400 text-sm mb-4">
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed">
           {division.description}
         </p>
-        <button className="flex items-center text-primary group-hover:translate-x-2 transition-transform duration-300">
-          <span className="text-sm font-semibold mr-2">Learn More</span>
+        <button className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300">
+          <span className="text-sm mr-2">Learn More</span>
           <HiArrowRight />
         </button>
       </div>

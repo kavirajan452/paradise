@@ -3,34 +3,27 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video/Image with Dark Overlay */}
+      {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
-        {/* Background gradient simulating video */}
-        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-brown to-dark"></div>
-        {/* Animated background pattern */}
-        <motion.div 
-          className="absolute inset-0 opacity-20"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(217, 125, 68, 0.1) 35px, rgba(217, 125, 68, 0.1) 70px)`
-          }}
-        ></motion.div>
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Background image placeholder with industrial theme */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/40 via-dark-brown/60 to-dark/90"></div>
+        {/* Simulated photo texture */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iYSIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJNLTEwIDMwaDYwdjJoLTYweiIgZmlsbD0icmdiYSgyMTcsIDEyNSwgNjgsIDAuMDUpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+')] opacity-30"></div>
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       {/* Content */}
       <div className="container-custom relative z-20 w-full">
-        <div className="max-w-6xl mx-auto">
-          {/* Headline Layout */}
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Headline Layout - Matching Design */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-left mb-4"
+            className="mb-2"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white">
               TURNING
             </h1>
           </motion.div>
@@ -39,9 +32,9 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-right mb-4"
+            className="text-right mb-6"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white">
               SCRAP INTO
             </h1>
           </motion.div>
@@ -50,23 +43,16 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center mb-8"
+            className="text-center mb-6"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white relative inline-block">
-              SUSTAINABILITY
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-primary"></div>
-            </h1>
+            <div className="inline-block">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-2">
+                SUSTAINABILITY
+              </h1>
+              {/* Orange underline bar */}
+              <div className="w-full h-1 md:h-1.5 bg-primary"></div>
+            </div>
           </motion.div>
-
-          {/* Supporting Text */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-gray-300 text-base md:text-lg text-center max-w-3xl mx-auto"
-          >
-            Leading the industry with advanced European recycling technology for over two decades
-          </motion.p>
         </div>
       </div>
 
