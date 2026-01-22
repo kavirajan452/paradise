@@ -3,19 +3,17 @@ import { HiArrowRight } from 'react-icons/hi';
 
 const CTA = () => {
   return (
-    <section id="contact" className="relative section-padding overflow-hidden">
+    <section id="contact" className="relative section-padding overflow-hidden min-h-[600px] flex items-center">
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
-        {/* Simulated industrial background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-brown via-dark to-dark-brown"></div>
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(217, 125, 68, 0.15) 35px, rgba(217, 125, 68, 0.15) 70px)`
-        }}></div>
-        {/* Dark overlay for emphasis */}
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark-brown/85 to-dark/90 z-10"></div>
+        {/* Rich brown industrial background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#4A2810] via-[#6B3410] to-[#3A1F0A]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gMTAwIDAgTCAwIDAgMCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMTcsIDEyNSwgNjgsIDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20"></div>
+        {/* Overlay for emphasis */}
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
       </div>
 
-      <div className="container-custom relative z-20">
+      <div className="container-custom relative z-20 w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,9 +26,9 @@ const CTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-primary text-sm font-semibold tracking-widest mb-6"
+            className="text-primary text-xs md:text-sm font-bold tracking-[0.3em] mb-6 uppercase"
           >
-            GET IN TOUCH
+            Get In Touch
           </motion.p>
           
           <motion.h2
