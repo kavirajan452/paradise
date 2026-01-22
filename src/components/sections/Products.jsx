@@ -21,10 +21,12 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="section-padding bg-dark relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+    <section id="products" className="section-padding bg-gradient-to-br from-blue-900/30 via-dark to-dark relative overflow-hidden">
+      {/* Background Image Overlay */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-dark-brown/60 to-dark/90"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gMTAwIDAgTCAwIDAgMCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMTcsIDEyNSwgNjgsIDAuMDgpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       <div className="container-custom relative z-10">
@@ -35,8 +37,8 @@ const Products = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="heading-primary mb-4">PRODUCT & MATERIALS</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 tracking-tight">PRODUCT & MATERIALS</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-base">
             Comprehensive solutions for buying and selling recycled materials
           </p>
         </motion.div>

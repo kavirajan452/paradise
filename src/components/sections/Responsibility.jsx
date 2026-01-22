@@ -21,9 +21,9 @@ const Responsibility = () => {
   ];
 
   return (
-    <section id="responsibility" className="section-padding bg-gradient-to-b from-dark-brown to-dark relative overflow-hidden">
+    <section id="responsibility" className="section-padding bg-gradient-to-br from-[#8B4513] via-[#6B3410] to-[#4A2810] relative overflow-hidden">
       {/* Background Texture */}
-      <div className="absolute inset-0 opacity-5" style={{
+      <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D97D44' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }}></div>
 
@@ -35,13 +35,13 @@ const Responsibility = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-primary text-sm font-semibold tracking-widest mb-4">
-            SUSTAINABILITY & CSR
+          <p className="text-primary text-xs md:text-sm font-bold tracking-[0.3em] mb-4 uppercase">
+            Sustainability & CSR
           </p>
-          <h2 className="heading-primary mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 tracking-tight">
             RECYCLING WITH <span className="text-primary">RESPONSIBILITY</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-200 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
             We are committed to environmental stewardship and social responsibility, 
             ensuring our operations contribute positively to communities and the planet.
           </p>
