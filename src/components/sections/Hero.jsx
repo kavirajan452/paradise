@@ -4,10 +4,12 @@ import { HiArrowRight } from 'react-icons/hi';
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/90 z-10"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=1920')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-brown to-dark"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(217, 125, 68, 0.1) 35px, rgba(217, 125, 68, 0.1) 70px)`
+        }}></div>
       </div>
 
       {/* Content */}

@@ -4,17 +4,17 @@ import { HiArrowRight } from 'react-icons/hi';
 const Responsibility = () => {
   const images = [
     {
-      url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800',
+      gradient: 'from-green-900/70 to-green-600/50',
       alt: 'Team collaboration',
       rotation: -5
     },
     {
-      url: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800',
+      gradient: 'from-blue-900/70 to-blue-600/50',
       alt: 'Environmental responsibility',
       rotation: 3
     },
     {
-      url: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800',
+      gradient: 'from-orange-900/70 to-orange-600/50',
       alt: 'Community engagement',
       rotation: -3
     }
@@ -61,11 +61,7 @@ const Responsibility = () => {
               style={{ transform: `rotate(${image.rotation}deg)` }}
             >
               <div className="w-64 h-64 overflow-hidden mb-3">
-                <img
-                  src={image.url}
-                  alt={image.alt}
-                  className="w-full h-full object-cover"
-                />
+                <div className={`w-full h-full bg-gradient-to-br ${image.gradient}`}></div>
               </div>
               <p className="text-dark text-center text-sm font-handwriting">{image.alt}</p>
             </motion.div>

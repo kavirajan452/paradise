@@ -4,16 +4,16 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const Clients = () => {
-  // Using placeholder logos - in a real scenario, these would be actual client logos
+  // Client logos as text
   const clients = [
-    { name: 'SAIL', logo: 'https://via.placeholder.com/150x80/1a1a1a/D97D44?text=SAIL' },
-    { name: 'Tata Steel', logo: 'https://via.placeholder.com/150x80/1a1a1a/D97D44?text=TATA' },
-    { name: 'SICAL', logo: 'https://via.placeholder.com/150x80/1a1a1a/D97D44?text=SICAL' },
-    { name: 'JSW', logo: 'https://via.placeholder.com/150x80/1a1a1a/D97D44?text=JSW' },
-    { name: 'Hindalco', logo: 'https://via.placeholder.com/150x80/1a1a1a/D97D44?text=HINDALCO' },
-    { name: 'Vedanta', logo: 'https://via.placeholder.com/150x80/1a1a1a/D97D44?text=VEDANTA' },
-    { name: 'NMDC', logo: 'https://via.placeholder.com/150x80/1a1a1a/D97D44?text=NMDC' },
-    { name: 'RINL', logo: 'https://via.placeholder.com/150x80/1a1a1a/D97D44?text=RINL' },
+    { name: 'SAIL' },
+    { name: 'TATA STEEL' },
+    { name: 'SICAL' },
+    { name: 'JSW' },
+    { name: 'HINDALCO' },
+    { name: 'VEDANTA' },
+    { name: 'NMDC' },
+    { name: 'RINL' },
   ];
 
   return (
@@ -49,13 +49,11 @@ const Clients = () => {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1 }}
-                className="group bg-dark-brown border border-gray-800 rounded-lg p-6 flex items-center justify-center hover:border-primary transition-all duration-300"
+                className="group bg-dark-brown border border-gray-800 rounded-lg p-6 flex items-center justify-center hover:border-primary transition-all duration-300 min-h-[100px]"
               >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
+                <h3 className="text-xl font-bold text-gray-400 group-hover:text-primary transition-colors">
+                  {client.name}
+                </h3>
               </motion.div>
             ))}
           </motion.div>
@@ -74,11 +72,9 @@ const Clients = () => {
             {clients.map((client, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-dark-brown border border-gray-800 rounded-lg p-6 flex items-center justify-center h-24">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="w-full h-auto grayscale"
-                  />
+                  <h3 className="text-lg font-bold text-gray-400">
+                    {client.name}
+                  </h3>
                 </div>
               </SwiperSlide>
             ))}

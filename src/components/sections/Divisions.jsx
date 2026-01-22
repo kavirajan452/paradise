@@ -11,17 +11,17 @@ const Divisions = () => {
     {
       title: 'WIRE RECYCLING',
       description: 'Advanced technology for efficient wire and cable recycling processes with high recovery rates.',
-      image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800'
+      gradient: 'from-blue-900/50 to-blue-600/30'
     },
     {
       title: 'STEEL INDUSTRY',
       description: 'Comprehensive steel processing and trading solutions for industrial applications.',
-      image: 'https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=800'
+      gradient: 'from-orange-900/50 to-orange-600/30'
     },
     {
       title: 'METAL PROCESSING',
       description: 'State-of-the-art facilities for processing various types of metals and alloys.',
-      image: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800'
+      gradient: 'from-yellow-900/50 to-yellow-600/30'
     }
   ];
 
@@ -91,11 +91,7 @@ const DivisionCard = ({ division, index }) => {
       {/* Image */}
       <div className="relative h-64 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-dark-brown via-transparent to-transparent z-10"></div>
-        <img
-          src={division.image}
-          alt={division.title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-        />
+        <div className={`w-full h-full bg-gradient-to-br ${division.gradient}`}></div>
       </div>
 
       {/* Content */}

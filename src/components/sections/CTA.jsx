@@ -4,10 +4,10 @@ import { HiArrowRight } from 'react-icons/hi';
 const CTA = () => {
   return (
     <section id="contact" className="relative section-padding overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/85 to-dark/95 z-10"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark-brown/85 to-dark/95 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-dark to-dark"></div>
       </div>
 
       <div className="container-custom relative z-20">

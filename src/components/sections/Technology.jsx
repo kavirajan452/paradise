@@ -16,29 +16,11 @@ const Technology = () => {
           >
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <div className="aspect-square bg-gradient-to-br from-primary/20 to-transparent rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1581092918484-8313e1f3f5f1?w=800"
-                    alt="Advanced Machinery"
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="aspect-square bg-gradient-to-br from-primary/20 to-transparent rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800"
-                    alt="Recycling Process"
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+                <div className="aspect-square bg-gradient-to-br from-blue-900/50 to-blue-600/30 rounded-lg"></div>
+                <div className="aspect-square bg-gradient-to-br from-green-900/50 to-green-600/30 rounded-lg"></div>
               </div>
               <div className="space-y-4 mt-8">
-                <div className="aspect-square bg-gradient-to-br from-primary/20 to-transparent rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800"
-                    alt="Quality Control"
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+                <div className="aspect-square bg-gradient-to-br from-orange-900/50 to-orange-600/30 rounded-lg"></div>
               </div>
             </div>
             {/* Floating Badge */}
