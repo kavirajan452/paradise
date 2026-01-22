@@ -18,13 +18,13 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '#about' },
+    { name: 'About Us', path: '#about' },
     { name: 'Divisions', path: '#divisions', hasMegaMenu: true },
-    { name: 'Products & Materials', path: '#products' },
-    { name: 'Technology', path: '#technology' },
-    { name: 'Responsibility', path: '#responsibility' },
+    { name: 'Product & Materials', path: '#products' },
+    { name: 'Process', path: '#technology' },
+    { name: 'Sustainability', path: '#responsibility' },
     { name: 'Clients', path: '#clients' },
-    { name: 'Contact', path: '#contact' },
+    { name: 'Contact Us', path: '#contact' },
   ];
 
   const megaMenuItems = [
@@ -72,9 +72,10 @@ const Header = () => {
               >
                 <a
                   href={item.path}
-                  className="text-white hover:text-primary transition-colors duration-300 text-sm font-medium"
+                  className="text-white hover:text-primary transition-colors duration-300 text-sm font-medium relative group"
                 >
                   {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
                 
                 {/* Mega Menu */}

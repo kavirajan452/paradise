@@ -1,4 +1,5 @@
 import Hero from '../components/sections/Hero';
+import Experience from '../components/sections/Experience';
 import Stats from '../components/sections/Stats';
 import Divisions from '../components/sections/Divisions';
 import Products from '../components/sections/Products';
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <main>
       <Hero />
+      <Experience />
       <Stats />
       <Divisions />
       <Products />

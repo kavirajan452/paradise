@@ -6,8 +6,13 @@ const CTA = () => {
     <section id="contact" className="relative section-padding overflow-hidden">
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark-brown/85 to-dark/95 z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-dark to-dark"></div>
+        {/* Simulated industrial background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-brown via-dark to-dark-brown"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(217, 125, 68, 0.15) 35px, rgba(217, 125, 68, 0.15) 70px)`
+        }}></div>
+        {/* Dark overlay for emphasis */}
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark-brown/85 to-dark/90 z-10"></div>
       </div>
 
       <div className="container-custom relative z-20">
@@ -23,7 +28,7 @@ const CTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-primary text-sm font-semibold tracking-widest mb-4"
+            className="text-primary text-sm font-semibold tracking-widest mb-6"
           >
             GET IN TOUCH
           </motion.p>
@@ -33,35 +38,31 @@ const CTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
           >
-            MAKE A <span className="text-primary">SUSTAINABLE</span> CHOICE
+            MAKE A <span className="text-primary">SUSTAINABLE</span>
           </motion.h2>
           
-          <motion.p
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8"
           >
-            Partner with us for eco-friendly recycling solutions that drive value and protect our environment. 
-            Let's build a greener future together.
-          </motion.p>
+            CHOICE TODAY WITH <span className="text-primary">PARADISE RECYCLING</span>
+          </motion.h2>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="mb-16"
           >
-            <button className="btn-primary group px-10 py-4 text-lg">
-              <span>Request a Quote</span>
-              <HiArrowRight className="ml-2 inline group-hover:translate-x-2 transition-transform" />
-            </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-dark font-semibold py-4 px-10 rounded transition-all duration-300">
-              Contact Us
+            <button className="btn-primary group px-12 py-5 text-lg font-bold">
+              <span>REQUEST A QUOTE</span>
+              <HiArrowRight className="ml-3 inline group-hover:translate-x-2 transition-transform" size={24} />
             </button>
           </motion.div>
 
@@ -71,7 +72,7 @@ const CTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-6 mt-16"
+            className="grid md:grid-cols-3 gap-6"
           >
             <div className="bg-dark-brown/80 backdrop-blur-sm border border-gray-700 rounded-lg p-6 hover:border-primary transition-all duration-300">
               <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">

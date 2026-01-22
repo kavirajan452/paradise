@@ -19,8 +19,8 @@ const Divisions = () => {
       gradient: 'from-orange-900/50 to-orange-600/30'
     },
     {
-      title: 'METAL PROCESSING',
-      description: 'State-of-the-art facilities for processing various types of metals and alloys.',
+      title: 'SCRAP PROCESSING',
+      description: 'State-of-the-art facilities for processing various types of scrap metals and materials.',
       gradient: 'from-yellow-900/50 to-yellow-600/30'
     }
   ];
